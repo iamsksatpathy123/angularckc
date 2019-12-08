@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color:black;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+  background-image: url("https://www.sentinelassam.com/wp-content/uploads/2019/06/iStock-690302872.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.right {
+  right: 0;
+  background-color: red;
+  background-image: url("https://www.lg.com/in/bond-with-nation/images/left_hdr.png");
+  background-size: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color:rgb(red, green, blue);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=number]:focus,input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="main">
+  
+
+  <div class="split left">
+  <div class="centered">
+    <div class="container">
+        <form action="/action_page.php">
+          <div class="container">
+            <h1>DONATION</h1>
+            <p>Please fill in this form to save life.</p>
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+        
+            <label for="phone"><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter phone number" name="phone" required>
+        
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            
+            <label class="radio-inline">
+                <input type="radio" value="male" name="male" checked>Male
+              </label>
+              <label class="radio-inline">
+                <input type="radio" value="female"  name="female">Female
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">other
+              </label>
+          <br>
+          <label for="blood"><b>Blood Group</b></label>
+            <input type="text" placeholder="Enter your Blood Group" name="blood" required>
+            <label for="reason"><b>Reason</b></label>
+            <input type="text" placeholder="Enter reason for donation" name="reason" required>
+           <hr>
+            <button type="submit" class="registerbtn">Submit</button>
+          </div>
+          
+          <div class="container signin">
+            <p>Are you a admin or member? If yes then <a routerLink="/login">Sign in</a>.</p>
+          </div>
+        </form>
+        </div>
+    <a routerLink="/login" >Click me</a>
+  </div>
+</div>
+
+<div class="split right">
+  <router-outlet>
+
+  <div class="centered">
+    </div>
+</router-outlet>
+
+</div>
+</div>
+</body>
+</html> 
